@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
 import { Link } from 'react-router-dom'
+import userDetails from './userDetails'
 
 class loginFields extends React.Component {
 
@@ -58,14 +59,15 @@ class loginFields extends React.Component {
             if (this.userJson[i].userName === this.state.nameText) {
                 if (this.userJson[i].password === this.state.pswdText) {
                     // allow redirection and login user
-                    this.setState({loginMessage: 'you are logged in!'})
+                    //this.setState({loginMessage: 'you are logged in!'})
+                    <Link to='/user_details'></Link>
                 } else {
                     //update screen with error
-                    this.setState({loginMessage: 'wrong password, loser!'})
+                    this.setState({loginMessage: 'Wrong password, loser!'})
                 }
                 break
             } else {
-                this.setState({loginMessage: 'user name "' + this.state.nameText + '" not recognized'})
+                this.setState({loginMessage: 'User Name "' + this.state.nameText + '" not recognized'})
             }
         }
     }

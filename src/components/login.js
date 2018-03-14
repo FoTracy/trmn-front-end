@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 //import LoginButton from './loginButton'
 import LoginFields from './loginFields'
-
 import '../App.css'
 
 class Login extends Component {
